@@ -23,8 +23,8 @@ main {
     flex-direction: column;
     margin-top: 20px;
     align-items: flex-start;
-    width: 550px;
-    height: 250px;
+    width: 300px;
+    height: 150px;
     border: 1px solid var(--primary-color);
     font: italic 1.5rem serif;
     font-weight: 500;

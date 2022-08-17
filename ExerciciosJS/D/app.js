@@ -6,6 +6,7 @@ function calcularMedia(){
     const n2 = parseFloat (document.getElementById('numero2').value)
     const n3 = parseFloat (document.getElementById('numero3').value)
     const n4 = parseFloat (document.getElementById('numero4').value)
+    let exame;
     const resultado = document.getElementById('result')
     const mediaForm = document.getElementById('media-form')
     let status;
@@ -15,11 +16,17 @@ function calcularMedia(){
     if (mediaForm.reportValidity()){
     if (valorMedia >= 5 ){
      status = 'Aprovado'
-    }else if (valorMedia < 5){
-     status = 'Reprovado'
+    }else {
+         exame = parseFloat(prompt('Voce ficou abaixo da media e deve fazer o exame'));
+            valorMedia = (valorMedia + exame) /2;
+         if (valorMedia >= 5){
+            status ='Aprovado em exame'
+        }else{
+            status = 'Reprovado'
+        }
     }
 
-    resultado.innerHTML = 'O estudante esta: ' + status
+        resultado.innerHTML = 'O estudante esta: ' + status
     }
 }
 
